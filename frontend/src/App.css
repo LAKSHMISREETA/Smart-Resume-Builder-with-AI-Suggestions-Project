@@ -1,0 +1,100 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+input, textarea {
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Print styles */
+@media print {
+  nav {
+    display: none !important;
+  }
+  
+  .App {
+    background: white !important;
+  }
+  
+  button {
+    display: none !important;
+  }
+
+  div[style*="background: linear-gradient"] {
+    background: white !important;
+  }
+
+  div[style*="box-shadow"] {
+    box-shadow: none !important;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  div[style*="gridTemplateColumns: repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  nav div {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6cd6, #6a4790);
+}
