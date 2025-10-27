@@ -1,33 +1,50 @@
-# -Smart-Resume-Builder-with-AI-Suggestions-Project-1-
+Smart Resume Builder (with AI Suggestions)
 
-# **GitHub Clone Command for Your Repository:**
-```bash
-git clone https://github.com/dhanuja1709/-Smart-Resume-Builder-with-AI-Suggestions-Project-1-.git
+Objective:
+A web app that builds resumes and suggests improvements using AI.
 
-## 🚀 Quick Start
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn
-### Installation & Run
+Tech Stack:
+React.js · Node.js · Express · MongoDB · Tailwind CSS · OpenAI API
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/dhanuja1709/-Smart-Resume-Builder-with-AI-Suggestions-Project-1-.git
-```
+Features:
 
-2. **Navigate to project directory**
-```bash
-cd -Smart-Resume-Builder-with-AI-Suggestions-Project-1-/frontend
+Form-based resume editor with live preview
 
-3. **Install dependencies**
-```bash
-npm install
+AI-powered resume improvement suggestions (GPT-3.5)
 
-4. **Start the development server**
-```bash
-npm start
+Save/load resumes via MongoDB
 
-5. **Open in browser**
-- Application will automatically open at: `http://localhost:3000`
-```
+Export to PDF with print styling
 
+Setup:
+
+# Frontend
+cd frontend && npm install && npm run dev
+
+# Backend
+cd backend && npm install
+# .env
+PORT=4000
+MONGODB_URI=your_mongo_uri
+OPENAI_API_KEY=your_openai_key
+npm run dev
+
+
+Endpoints:
+
+POST /api/resumes — create
+
+GET /api/resumes/:id — fetch
+
+POST /api/resumes/:id/suggest — get AI tips
+
+GET /api/resumes/:id/export — PDF export
+
+Mini Guide:
+Users fill forms → resume preview updates live → AI suggests improvements → export PDF.
+Use GPT-3.5 (free tier) via Node backend for suggestions.
+
+Deliverables:
+✅ Interactive builder
+✅ PDF export
+✅ AI suggestion feature
